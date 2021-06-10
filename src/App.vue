@@ -1,10 +1,9 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+  <div id="app" class="bg-red-50 text-center dark:bg-gray-700 p-9">
+    <h1 class="text-purple-900 font-bold border inset-0">
+      This is an about page
+    </h1>
+    <div class="btn-abc">abc</div>
   </div>
 </template>
 
