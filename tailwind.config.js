@@ -43,6 +43,7 @@ module.exports = {
     screens: false,
   },
   theme: {
+    screens: {},
     spacing: pxAction(0, 2, 100),
     colors: {
       black: "#000",
