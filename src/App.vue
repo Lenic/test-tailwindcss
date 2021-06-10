@@ -1,9 +1,14 @@
 <template>
-  <div id="app" class="bg-red-50 text-center dark:bg-gray-700 p-9">
-    <h1 class="text-purple-900 font-bold border inset-0">
-      This is an about page
-    </h1>
-    <div class="btn-abc">abc</div>
+  <div
+    id="app"
+    class="text-12 bg-warning-light md:bg-danger-light hover:text-primary"
+  >
+    <h1 class="font-600 text-16">This is an about page</h1>
+    <div
+      class="text-warning-light hover:text-success bg-gradient-to-r from-primary-light to-warning text-36 font-bold cursor-pointer"
+    >
+      abc
+    </div>
   </div>
 </template>
 
