@@ -4,8 +4,5 @@
 
 .btn-abc {
   cursor: pointer;
-}
-
-.btn-abc:hover {
-  transition: all 0.3s;
+  @apply inline-block px-16 py-4 text-24 bg-gradient-to-r from-success to-warning text-white rounded-full;
 }

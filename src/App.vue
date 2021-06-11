@@ -1,14 +1,11 @@
 <template>
-  <div
-    id="app"
-    class="text-12 bg-warning-light md:bg-danger-light hover:text-primary"
-  >
-    <h1 class="font-600 text-16">This is an about page</h1>
-    <div
-      class="text-warning-light hover:text-success bg-gradient-to-r from-primary-light to-warning text-36 font-bold cursor-pointer"
+  <div id="app" class="p-24 bg-success-light">
+    <h1
+      class="text-warning text-36 bg-primary-light mb-12 rounded-8 leading-60"
     >
-      abc
-    </div>
+      This is an about page
+    </h1>
+    <div class="btn-abc">abc</div>
   </div>
 </template>
 

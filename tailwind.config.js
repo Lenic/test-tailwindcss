@@ -36,7 +36,11 @@ function boxShadow(begin, step, end) {
 }
 
 module.exports = {
-  purge: [],
+  purge: {
+    enabled: true,
+    preserveHtmlElements: false,
+    content: ["./src/**/*.html", "./src/**/*.vue", "./src/**/*.js"],
+  },
   darkMode: false, // or 'media' or 'class'
   corePlugins: {
     color: false,
