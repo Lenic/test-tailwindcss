@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="p-24 bg-success-light">
+  <div id="app" class="p-24 bg-success-light px-12!">
     <h1
       class="text-warning text-36 bg-primary-light mb-12 rounded-8 leading-60"
     >

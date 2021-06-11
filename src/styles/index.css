@@ -4,5 +4,6 @@
 
 .btn-abc {
   cursor: pointer;
-  @apply inline-block px-16 py-4 text-24 bg-gradient-to-r from-success to-warning text-white rounded-full;
+  @apply inline-block px-32 py-4 text-24 bg-gradient-to-r from-success to-warning text-white rounded-full;
+  @apply hover:from-black hover:to-success;
 }
