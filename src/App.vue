@@ -1,7 +1,7 @@
 <template>
-  <div id="app" class="p-24 bg-success-light px-12!">
+  <div id="app" class="p-24 bg-primary px-12! bg-opacity-30 w-full h-full">
     <h1
-      class="text-warning text-36 bg-primary-light mb-12 rounded-8 leading-60"
+      class="text-warning text-36 bg-primary-light mb-12 rounded-8 leading-60 hover:text-opacity-50 hover:scale-110 transform transition-transform duration-100 cursor-pointer"
     >
       This is an about page
     </h1>

@@ -5,5 +5,6 @@
 .btn-abc {
   cursor: pointer;
   @apply inline-block px-32 py-4 text-24 bg-gradient-to-r from-success to-warning text-white rounded-full;
-  @apply hover:from-black hover:to-success;
+  @apply hover:from-black hover:to-success hover:text-danger hover:text-opacity-70;
+  @apply transform hover:scale-110 transition duration-100 transition-transform;
 }
