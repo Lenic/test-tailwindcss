@@ -104,7 +104,7 @@ module.exports = {
         light: colorVariable('var(--colors-danger-light)'),
       },
     },
-    borderColor: { DEFAULT: 'var(--colors-border-default)' },
+    borderColor: { DEFAULT: 'var(--colors-border)' },
     borderRadius: Object.assign(pxAction(0, 2, 8), { DEFAULT: '4px', full: '9999px' }),
     borderWidth: { DEFAULT: '1px' },
     boxShadow: Object.assign(boxShadow(0, 1, 24), { none: 'none' }),
