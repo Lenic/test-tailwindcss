@@ -54,13 +54,15 @@ module.exports = {
         colors: {
           main: '#101217',
           secondary: '#515151',
-          muted: '#bfbfbf',
+          muted: '#535557',
           note: '#bfbfbf',
 
           black: '#000',
           white: '#fff',
-
-          border: '#e2e5e9',
+          grey: {
+            91: '#919191',
+            e2: '#e2e5e9',
+          },
 
           primary: {
             DEFAULT: '#3d7fff',
@@ -76,7 +78,7 @@ module.exports = {
           },
           danger: {
             DEFAULT: '#ff3d61',
-            light: '#ffdbe2',
+            light: '#fff1f4',
           },
         },
       },
@@ -88,37 +90,44 @@ module.exports = {
       white: colorVariable('var(--colors-white)'),
 
       primary: {
-        DEFAULT: colorVariable('--colors-primary-default'),
+        DEFAULT: colorVariable('--colors-primary'),
         light: colorVariable('var(--colors-primary-light)'),
       },
       success: {
-        DEFAULT: colorVariable('var(--colors-success-default)'),
+        DEFAULT: colorVariable('var(--colors-success)'),
         light: colorVariable('var(--colors-success-light)'),
       },
       warning: {
-        DEFAULT: colorVariable('var(--colors-warning-default)'),
+        DEFAULT: colorVariable('var(--colors-warning)'),
         light: colorVariable('var(--colors-warning-light)'),
       },
       danger: {
-        DEFAULT: colorVariable('var(--colors-danger-default)'),
+        DEFAULT: colorVariable('var(--colors-danger)'),
         light: colorVariable('var(--colors-danger-light)'),
       },
+      grey: {
+        91: colorVariable('var(--colors-grey-91)'),
+        e2: colorVariable('var(--colors-grey-e2)'),
+      },
     },
-    borderColor: { DEFAULT: 'var(--colors-border)' },
+    borderColor(theme) {
+      return Object.assign(theme('colors'), { DEFAULT: 'var(--colors-grey-e2)' });
+    },
     borderRadius: Object.assign(pxAction(0, 2, 8), { DEFAULT: '4px', full: '9999px' }),
-    borderWidth: { DEFAULT: '1px' },
+    borderWidth: { DEFAULT: '1px', 0: '0px' },
     boxShadow: Object.assign(boxShadow(0, 1, 24), { none: 'none' }),
     fontSize: Object.assign(pxAction(10, 2, 50), { 0: '0px' }),
     fontWeight: Object.assign(numberAction(100, 100, 700), { bold: 'bold', normal: 'normal' }),
     height: Object.assign(pxAction(0, 100, 700), pxAction(12, 2, 98), { auto: 'auto', full: '100%', screen: '100vh' }),
     lineHeight: pxAction(12, 2, 100),
-    textColor: (theme) =>
-      Object.assign(theme('colors'), {
+    textColor(theme) {
+      return Object.assign(theme('colors'), {
         main: colorVariable('var(--colors-main)'),
         secondary: colorVariable('var(--colors-secondary)'),
         muted: colorVariable('var(--colors-muted)'),
         note: colorVariable('var(--colors-note)'),
-      }),
+      });
+    },
     width: Object.assign(pxAction(0, 100, 700), {
       auto: 'auto',
       full: '100%',
@@ -145,7 +154,7 @@ module.exports = {
     borderOpacity: ['responsive', 'group-hover', 'focus-within', 'hover', 'focus', 'important'],
     borderRadius: ['responsive', 'important'],
     borderStyle: ['responsive', 'important'],
-    borderWidth: ['responsive', 'important'],
+    borderWidth: ['responsive', 'focus', 'important'],
     boxShadow: ['responsive', 'group-hover', 'focus-within', 'hover', 'focus', 'important'],
     boxSizing: ['responsive', 'important'],
     clear: ['responsive', 'important'],
@@ -250,10 +259,10 @@ module.exports = {
       colorVariables: true,
     }),
     plugin(function ({ addVariant }) {
-      addVariant('important', ({ container }) => {
-        container.walkRules((rule) => {
+      addVariant('important', function ({ container }) {
+        container.walkRules(function (rule) {
           rule.selector = `${rule.selector}\\!`;
-          rule.walkDecls((decl) => {
+          rule.walkDecls(function (decl) {
             decl.important = true;
           });
         });
