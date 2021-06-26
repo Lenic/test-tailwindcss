@@ -5,7 +5,17 @@
     >
       This is an about page
     </h1>
-    <div class="btn-abc border p-10 text-main text-opacity-20 text-center text-20 leading-24 h-24">abc</div>
+    <div class="btn-abc border p-10 text-main text-opacity-20 text-center text-20 leading-60 h-60">abc</div>
+    <span
+      class="text-success hover:text-danger font-normal bg-danger bg-opacity-10 border-danger px-10 py-4 rounded-full"
+    >
+      Test
+    </span>
+    <div
+      class="text-warning hover:text-white hover:text-opacity-70 bg-grey-e2 hover:bg-grey-91 border-primary rounded-4 transition-all duration-1000 mt-16 transform hover:scale-y-150"
+    >
+      xyz
+    </div>
   </div>
 </template>
 
