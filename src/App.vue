@@ -1,7 +1,20 @@
 <template>
-  <div id="app" class="p-24 bg-primary px-12! bg-opacity-30 w-full h-full">
+  <div id="app" class="p-24 bg-primary px-12! bg-opacity-30 w-full h-full text-left">
     <h1
-      class="text-warning text-36 bg-primary-light mb-12 rounded-8 leading-60 hover:text-opacity-50 hover:scale-110 transform transition-transform duration-100 cursor-pointer p-10 divide-x-0"
+      class="
+        text-warning text-36
+        bg-primary-light
+        mb-12
+        rounded-8
+        leading-60
+        hover:text-opacity-50 hover:scale-110
+        transform
+        transition-transform
+        duration-100
+        cursor-pointer
+        p-10
+        divide-x-0
+      "
     >
       This is an about page
     </h1>
@@ -12,12 +25,38 @@
       Test
     </span>
     <div
-      class="text-warning hover:text-white hover:text-opacity-70 bg-grey-e2 hover:bg-grey-91 border-primary rounded-4 transition-all duration-1000 mt-16 transform hover:scale-y-150"
+      class="
+        text-warning
+        hover:text-white hover:text-opacity-70
+        bg-grey-e2
+        hover:bg-grey-91
+        border-primary
+        rounded-4
+        transition-all
+        duration-1000
+        mt-16
+        transform
+        hover:scale-y-150
+      "
     >
       xyz
     </div>
   </div>
 </template>
+
+<script lang="ts">
+import { defineComponent, ref } from '@vue/composition-api'
+
+export default defineComponent({
+  setup() {
+    const countRef = ref(0);
+
+    return {
+      count: countRef,
+    },
+  },
+})
+</script>
 
 <style>
 #app {
